@@ -70,7 +70,7 @@ findDCOL <-function(a, b, nNodes = 16){
 
 #Rcpp
 library(Rcpp)
-sourceCpp("code/matrix_multiplication.cpp")
+sourceCpp("path/to/your/matrix_multiplication.cpp")
 getCov <- function(DCOLMatrix, X, Y){  ##X and Y, row: sample col: feature
   ###two vectors
   if (is.null(nrow(DCOLMatrix)) | isTRUE(nrow(DCOLMatrix) == 1)){ 
