@@ -1,0 +1,46 @@
+---
+title: "Tutorial"
+output: html_document
+date: "2024-10-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Example of using DCOL-PCA
+```{r}
+#load demo data or you can use your own data
+X <- load('/Users/aaa/Documents/Research/DCOLproject/code10/PCA/demo/N_500_genes_500_grps_10_grp.size_50_eps_0.2_simu_2_out.Rdata')
+set.seed(100)
+demo <- data.gen(n.genes = 500 , n.samples = 500, n.grps = 10, aver.grp.size = 50, n.fun.types=5, epsilon = 0.1, n.depend=0)
+dim(demo$data)
+
+#### DCOL-PCA takes one input matrix with rows representing samples and columns representing features.
+##### You can specify the dimension of the reduced data (k), with a default value of 5.
+X.res <- Dcol_PCA(demo$data, labels = demo$grps, k = 5, nNodes = 2)
+
+#Visualize the result returned by DCOL-PCA
+plot.result(X.res$data.r, demo$grps,k = 4)
+
+
+```
+
+Example of using DCOL-CCA
+```{r}
+X <- matrix(rnorm(50000), ncol=50) #1000*50
+Y <- matrix(rnorm(70000), ncol=70) #1000*70
+dim(X)
+dim(Y)
+#### DCOL-CCA takes two input matrices \(X\) (of size \(N \times p\)) and \(Y\) (of size \(N \times q\)), where each row represents a sample and each column represents a feature. The matrices X and Y represent different profiling results on the same set of samples.
+##### You can specify the dimension of the reduced data \(k\), with a default value set to 5.
+result <- Dcol_CCA(X, Y, k = 5)
+####DCOL-CCA provides embeddings for X and Y, respectively (stored in .data.r.X and .data.r.Y)
+X.embedding <- result$data.r.X
+dim(X.embedding)
+Y.embedding <- result$data.r.Y
+dim(Y.embedding)
+
+  
+```
+
