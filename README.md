@@ -15,8 +15,5 @@ Here, we introduce **DCOL-PCA** and **DCOL-CCA**, our innovative methods for dim
 
 ## Tutorial
 We provide examples on how to use **DCOL-PCA** and **DCOL-CCA**. Their usage is straightforward. Please refer to the [R Markdown tutorial](https://github.com/hey-LSJ/DCOL-PCA-CCA/blob/main/tutorial/tutorial.Rmd).
-
-
-
-
+ 
 For further details, please refer to the full paper or contact the authors for inquiries.
