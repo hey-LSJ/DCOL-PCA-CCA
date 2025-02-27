@@ -15,5 +15,13 @@ Here, we introduce **DCOL-PCA** and **DCOL-CCA**, our innovative methods for dim
 
 ## Tutorial
 We provide examples on how to use **DCOL-PCA** and **DCOL-CCA**. Their usage is straightforward. Please refer to the [R Markdown tutorial](https://github.com/hey-LSJ/DCOL-PCA-CCA/blob/main/tutorial/tutorial.Rmd).
+
+## Tutorial
+
+We provide examples on how to use **DCOL-PCA** and **DCOL-CCA**. Their usage is straightforward. Please refer to the [R Markdown tutorial](https://github.com/hey-LSJ/DCOL-PCA-CCA/blob/main/tutorial/tutorial.Rmd).
+
+## Simulation Data
+
+The simulated dataset can be downloaded from [this link](https://cuhko365-my.sharepoint.com/:f:/g/personal/221049041_link_cuhk_edu_cn/Emr-X6fPzDFJt_azi973RB4BxSnipdW8njbisEkU5zw4Dw?e=wSbhekwe). The functions to generate simulated data for both single-omics and multi-omics settings are available in the **DCOL-PCA** and **DCOL-CCA** directories within the **Simulation** folder.
  
 For further details, please refer to the full paper or contact the authors for inquiries.
